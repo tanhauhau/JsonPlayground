@@ -1,7 +1,7 @@
 {
-  "name": "electron-react-boilerplate",
-  "productName": "ElectronReact",
-  "version": "0.12.0",
+  "name": "JsonPlayground",
+  "productName": "JsonPlayground",
+  "version": "0.0.1",
   "description": "Electron application boilerplate based on React, React Router, Webpack, React Hot Loader for rapid application development",
   "scripts": {
     "test": "cross-env NODE_ENV=test BABEL_DISABLE_CACHE=1 node --trace-warnings ./test/runTests.js",
@@ -188,7 +188,9 @@
     "electron-debug": "^1.1.0",
     "font-awesome": "^4.7.0",
     "history": "^4.6.1",
+    "lodash": "^4.17.4",
     "react": "^15.5.4",
+    "react-codemirror": "^1.0.0",
     "react-dom": "^15.5.4",
     "react-hot-loader": "3.0.0-beta.6",
     "react-redux": "^5.0.5",
@@ -196,7 +198,8 @@
     "react-router-dom": "^4.1.1",
     "react-router-redux": "^5.0.0-alpha.6",
     "redux": "^3.6.0",
-    "redux-thunk": "^2.2.0",
+    "redux-observable": "^0.14.1",
+    "rxjs": "^5.4.2",
     "source-map-support": "^0.4.15"
   },
   "devEngines": {

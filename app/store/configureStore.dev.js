@@ -1,9 +1,10 @@
 import { createStore, applyMiddleware, compose } from 'redux';
-import thunk from 'redux-thunk';
 import { createHashHistory } from 'history';
 import { routerMiddleware, routerActions } from 'react-router-redux';
+import { createEpicMiddleware } from 'redux-observable';
 import { createLogger } from 'redux-logger';
 import rootReducer from '../reducers';
+import rootEpic from '../epics';
 import * as counterActions from '../actions/counter';
 import type { counterStateType } from '../reducers/counter';
 
@@ -13,9 +14,6 @@ const configureStore = (initialState?: counterStateType) => {
   // Redux Configuration
   const middleware = [];
   const enhancers = [];
-
-  // Thunk Middleware
-  middleware.push(thunk);
 
   // Logging Middleware
   const logger = createLogger({
@@ -27,6 +25,10 @@ const configureStore = (initialState?: counterStateType) => {
   // Router Middleware
   const router = routerMiddleware(history);
   middleware.push(router);
+
+  // Epic Middleware
+  const epicMiddleware = createEpicMiddleware(rootEpic);
+  middleware.push(epicMiddleware)
 
   // Redux DevTools Configuration
   const actionCreators = {
