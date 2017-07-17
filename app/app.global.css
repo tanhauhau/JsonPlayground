@@ -7,6 +7,7 @@ body {
   background-color: #E6F0F4;
   font-family: Arial, Helvetica, Helvetica Neue, serif;
   overflow-y: hidden;
+  margin: 0;
 }
 /*
 h2 {
