@@ -188,7 +188,7 @@
     "electron-debug": "^1.1.0",
     "font-awesome": "^4.7.0",
     "history": "^4.6.1",
-    "lodash": "^4.17.4",
+    "lodash": "^4.17.13",
     "material-ui": "next",
     "react": "^15.5.4",
     "react-codemirror": "^1.0.0",
